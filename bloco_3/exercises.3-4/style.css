@@ -9,5 +9,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
     .tabela-informacao {
-      
+                float:right;
+                display:inline;
+                width:260px;
     }

@@ -1,4 +1,13 @@
-.sobre-inseto {
-  display:inline;
-  background-color:red;
+.topo {
+    display:inline-block;
+    background-color:rgb(203, 224, 82);
+    float:right;
 }
+
+  .titulo1 {
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+    .tabela-informacao {
+      
+    }

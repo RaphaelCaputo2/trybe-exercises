@@ -5,9 +5,5 @@ let saida = '';
 
 for (linhas = 0; linhas < n; linhas += 1) {
         saida += simbolo;
-        
-};  
-
-for (linhas = 0; linhas < n; linhas += 1) {
-    console.log(saida);
-};
+        console.log(saida);
+}

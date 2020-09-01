@@ -13,9 +13,13 @@ let info2 = {
 
 }
 
+for (let properties in info) {
+    if (info[properties] === info.recorrente && info[properties] === "Sim" && info2[properties] === "Sim") {
+        console.log("Ambos Recorrentes");
+    } else {
+        console.log(info[properties] + " e " + info2[properties]);
+    }
 
 
-console.log(info.personagem + ' ' + info2.personagem);
-console.log(info.origem + ' ' + info2.origem);
-console.log(info.nota + ' ' + info2.nota);
-console.log(info.recorrente + ' ' + info2.recorrente);
+
+}

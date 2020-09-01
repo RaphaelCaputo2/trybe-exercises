@@ -11,5 +11,6 @@ for (let key in info) {
 }
 
 
+
 //console.log("Seja muito bem vinda " + info.personagem + " " + info.origem + " " + info.nota + " " + info.recorrente);
 

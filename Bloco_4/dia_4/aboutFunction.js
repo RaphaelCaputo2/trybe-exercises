@@ -1,11 +1,11 @@
-function verificaPalindrome(string) {
-    let reverse = string.split("").reverse().join("");
-    if (reverse === string) {
-      return true;
-    } else {
-      return false;
+function palidromo(palavra){
+  let divideEmArray = palavra.split('');
+  let ehpalidromo = true;
+  for (let i in divideEmArray) {
+    if (divideEmArray[i] != palavra[(palavra.length -1) - i]) {
+      ehpalidromo = false;
     }
   }
-  console.log(verificaPalindrome('raphael'));
-
-  //Essa questão foi pega no gabarito, para ser estudada!
+  return ehpalidromo;
+};
+console.log(palidromo('ovo'));

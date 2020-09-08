@@ -60,6 +60,23 @@
       let adicionandoH1 = document.createElement('h1');
       adicionandoH1.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
       document.body.appendChild(adicionandoH1);
+
+        let adicionandoDiv = document.createElement('div');
+        adicionandoDiv.className = 'main-content';
+        document.body.appendChild(adicionandoDiv);
+
+        let adicionandoDiv2 = document.createElement('div');
+        adicionandoDiv2.className = 'center-content';
+        adicionandoDiv.appendChild(adicionandoDiv2);
+
+        let adicionandoP = document.createElement('p');
+        adicionandoP.innerHTML = 'Welcome to the jungle';
+        adicionandoDiv2.appendChild(adicionandoP);
+
+        let adicionandoMaisDiv = document.createElement('div');
+        adicionandoMaisDiv.className = 'left-content';
+        adicionandoDiv.appendChild(adicionandoMaisDiv);
+
     </script>
   </body>
 </html>

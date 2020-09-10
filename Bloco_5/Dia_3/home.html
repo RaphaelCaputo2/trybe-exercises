@@ -19,13 +19,14 @@
 
     <script>
       function libIt() {
-        let story = document.getElementById("story");
-        let person = document.getElementById("person").value;
-        let adjetivo = document.getElementById("adjective").value;
-        let noun = document.getElementById("noun").value;
-        story.innerHTML = person + " married a " + adjetivo + " " + noun + " Sao felizes e tiveram o Gael";
+        let story = document.getElementById('story');
+        let person = document.getElementById('person').value;
+        let adjetivo = document.getElementById('adjective').value;
+        let noun = document.getElementById('noun').value;
+        story.innerHTML =
+          person + ' married a ' + adjetivo + ' ' + noun + ' Sao felizes e tiveram o Gael';
       }
-      let libButton = document.getElementById("lib-button");
+      let libButton = document.getElementById('lib-button');
       libButton.addEventListener('click', libIt);
     </script>
   </body>

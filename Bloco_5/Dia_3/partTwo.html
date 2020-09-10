@@ -6,7 +6,7 @@
     <title>Exercício - Parte 2</title>
  
   </head>
-  <body>
+  <body class="mudandoCor">
     <div>
       <h1>Exercício - Parte 2</h1>
       <hr />
@@ -76,7 +76,19 @@
         Além disso, sempre que um dos eventos for realizado deve-se logar no
         console qual dos eventos acabou de ocorrer.
       </p>
-      <!-- Adicione a tag <img /> aqui -->
+      <img class="tarefa-bonus" src="img1.png"/> 
+
+      <script lenguage="javascript" type="text/javascript">
+      let elementImg = document.querySelector(".tarefa-bonus");
+      elementImg.addEventListener("mouseover", function (evento) {
+        elementImg.src = "img2.png"
+        console.log("O evento foi: ", evento.type);
+      });
+        elementImg.addEventListener("mouseleave", function (evento) {
+          elementImg.src ="img1.png"
+          console.log("O evento foi: ", evento.type);
+        });
+      
     </div>
   </body>
 </html>

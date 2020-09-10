@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>Cat Walk</title>
- </head>
- <body>
-  
-  <img  style="position:absolute;" src="homer.gif">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+  </head>
+  <body>
+    <img style="position: absolute" src="homer.gif" />
 
-
-  <script lenguage="javascript" type="text/javascript">
- var img = document.getElementsByTagName('img')[0];
-img.style.left = '0px';
-function catWalk() {
-  img.style.left = (parseInt(img.style.left) + 10) + 'px';
-}
-window.setInterval(catWalk, 150);
-
-  </script>
- </body>
+    <script lenguage="javascript" type="text/javascript">
+      let img = document.getElementsByTagName('img')[0];
+      img.style.left = '0px';
+      function catWalk() {
+        img.style.left = parseInt(img.style.left) + 10 + 'px';
+      }
+      window.setInterval(catWalk, 150);
+    </script>
+  </body>
 </html>

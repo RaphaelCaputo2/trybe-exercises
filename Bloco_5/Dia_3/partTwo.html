@@ -46,10 +46,20 @@
         exibir um alerta contendo a mensagem "Desconto de R$(resultado)", sendo
         <strong>discount</strong> o resultado da multiplicação.
       </p>
+      <button type="button" class="tarefa2">Seu Desconto</button>
       <script language="javascript" type="text/javascript">
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
+
+
+      let productPrice = 59.99;
+      let discount = 0.3;
+      let resultado = productPrice * discount;
+      let button2 = document.querySelector(".tarefa2");
+        button2.addEventListener("click", function () {
+        
+          alert(`Desconto de R$  ${resultado.toFixed(2)}!`);
+        });
+        
+
       </script>
       <hr />
       <h2>Bônus</h2>

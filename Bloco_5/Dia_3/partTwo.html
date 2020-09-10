@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício - Parte 2</title>
-    <!-- Seu código JavaScript pode vir aqui -->
-    <!-- Seu código JavaScript pode vir aqui -->
-    <!-- Seu código JavaScript pode vir aqui -->
+ 
   </head>
   <body>
     <div>
@@ -20,6 +18,20 @@
         exibido.
       </p>
       <div class="tarefa1">Adicione o botão aqui!</div>
+      <script cript language="javascript" type="text/javascript">
+
+
+        let clicarBotao = document.querySelector(".tarefa1");
+        let button = document.createElement("button");
+        clicarBotao.textContent = '';
+        button.textContent = 'Botão';
+        button.addEventListener("click",function () {
+        alert("Você clicou no botão");
+   
+        })
+        clicarBotao.appendChild(button);
+   
+      </script>
       <hr />
       <h2>Tarefa 2</h2>
       <p>

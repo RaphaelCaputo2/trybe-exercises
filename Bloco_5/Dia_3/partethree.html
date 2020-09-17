@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+  </head>
+  <body>
+    <img style="position: absolute" src="homer.gif" />
+
+    <script lenguage="javascript" type="text/javascript">
+      let img = document.getElementsByTagName('img')[0];
+      img.style.left = '0px';
+      function homerWalk() {
+        let continueLeft = parseInt(img.style.left);
+        img.style.left = (continueLeft + 10)  + 'px';
+        if (continueLeft > (window.innerWidth-img.width)) {
+          img.style.left = '0px';
+        }
+      
+      }
+      window.setInterval(homerWalk, 10);
+    </script>
+  </body>
+</html>

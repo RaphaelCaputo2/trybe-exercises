@@ -1,3 +1,4 @@
+const picker = new Pikaday({ field: document.getElementById('datepicker') });
 const estados2 = document.getElementById('comboBox');
 const estados = {
   AC: 'Acre',
@@ -37,5 +38,4 @@ estados2.addEventListener('click', function () {
   }
   estados2.removeEventListener('click', click);
 });
-
 

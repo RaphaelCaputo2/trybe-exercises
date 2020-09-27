@@ -1,0 +1,44 @@
+body {
+font-size: x-large;
+margin: 10px 10px 20px 20px;
+
+}
+h1 {
+font-size: 1rem;
+}
+h2 {
+
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+
+}
+
+figure {
+    margin: 200px;
+}
+
+@media screen and (max-width: 527px) {
+  body {
+    font-size: 15px;
+    background-color: rebeccapurple ;
+    margin: 10px 20px 20px 10px;
+    padding: 10px 10px 10px 10px;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure {
+    display: flex;
+    margin: 50px;
+    border:solid 2px black;
+    
+  }
+  body figcaption {
+    display: flex;
+     color: white;
+     justify-content:flex-start ;
+      }
+}

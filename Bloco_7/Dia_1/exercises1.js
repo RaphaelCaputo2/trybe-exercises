@@ -2,7 +2,7 @@
 
 let funcao = (n) => {
   let resultado = 1;
-  for (let i = 1; i <= n; i++) {
+  for(let i = 1; i <= n; i++) {
     resultado *= i;
   }
   return resultado;
@@ -11,8 +11,8 @@ console.log(funcao(5));
 
 
 //Exercicio bonus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha.
-let funcao = (n) => { let resultado = 1;for (let i = 1; i <= n; i++) {resultado *= i;} resultado; };
-
+let fatorial = n => n > 1 ? n * fatorial(n - 1): 1; 
 
 //Exercicio 2: Crie uma função que receba uma frase e retorne qual a maior palavra.
 
+ 

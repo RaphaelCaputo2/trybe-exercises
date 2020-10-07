@@ -64,34 +64,49 @@ const books = [
 ];
 
 const expected_result = [
-  {
-    age: 31,
-    author: 'Isaac Asimov'
+ {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
   },
   {
-    age: 38,
-    author: 'H. P. Lovecraft'
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
   },
   {
-    age: 39,
-    author: 'Stephen King'
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
   },
   {
-    age: 43,
-    author: 'George R. R. Martin'
+    id: 4,
+    name: 'Duna',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
   },
-  {
-    age: 45,
-    author: 'Frank Herbert'
-  },
-  {
-    age: 62,
-    author: 'J. R. R. Tolkien'
-  }
-];
+]
 
-function nameAndAge() {
-  // escreva seu código aqui
+function fantasyOrScienceFiction() {
+  return books.filter(newArr => newArr.genre === 'Fantasia' || newArr.genre === 'Ficção Científica');
 }
-
-assert.deepEqual(nameAndAge(), expected_result);
+assert.deepEqual(fantasyOrScienceFiction(), expected_result);

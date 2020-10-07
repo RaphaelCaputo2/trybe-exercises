@@ -6,7 +6,7 @@ const notas = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 //Gabarito
 function studentAverage() {
-  const nameAndAverage = students.map((student, index)=> ({
+  const nameAndAverage = alunos.map((student, index)=> ({
     name: student,
     media: (notes[index].reduce((acc, curr)=> acc+curr, 0 ) / notes[index].length),
   }));

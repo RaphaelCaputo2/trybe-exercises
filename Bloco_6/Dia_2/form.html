@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="bulma.css" media="screen" />
+</head>
+
+
+<body>
+  <div class="field control is-fullhd">
+  <header class="cabecalho">
+    <h1><em>Cadastre seu curriculo</em></h1>
+  </div>
+  </header>
+  <div class="field">
+  <form action="" method="get">
+  </div>
+  <div class="field">
+   <div class="control container notification">
+    <fieldset>
+    <legend>Nome</legend> 
+    Nome  <input class="input is-small"  type="text" id="nome-texto" value="" maxlength="40" required>
+    Email <input class="input is-small"  type="text" name="" id="email-texto" naxlength="50" required>
+    CPF <input class="input is-small"  type="text" name="" id="cpf-text" naxlength="11" required>
+    Endereço <input class="input is-small"  type="text" name="" id="endereco-texto" naxlength="200" required>
+    Cidade <input class="input is-small"  type="text" name="" id="cidade-texto" naxlength="28" required>
+   Estado <select class="input is-small"  class="select" id="comboBox" required>
+  </div>
+  </div>
+ 
+    </select>
+
+    </fieldset>
+    <div class="field">
+     <div class="control">
+       <br>
+    <fieldset>
+      
+      <legend>Resumo do curriculo -  Último Emprego:</legend> 
+      <br>
+      
+      Cargo: <input class="input is-small" type="text" id="cargo-texto" maxlength="40" required>
+      Descrição do cargo: <input  class="input is-small"  type="text" name="" id="texto" required>
+      Data de Inicio: <input class="input is-small"  type="date" id="">
+      Data de Saída: <input class="input is-small"  type="date" id="">
+      
+      <label class="label is-small" for=""></label>
+    </div>
+      <textarea name="" id="" cols="60" rows="10" maxlength="1000" placeholder="Escreva aqui o sua experiencia em resumo. Como 1000 letras no total" required></textarea>
+    </div>
+    </fieldset>
+    
+<button type="submit"     class="button is-primary">Submit</button>
+
+
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

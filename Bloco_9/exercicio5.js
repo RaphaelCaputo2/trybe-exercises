@@ -10,7 +10,7 @@ const getPlanet = () => {
     console.log(
       `Returnerd planet: ${mars.name} ${mars.distanceFromSun.value} ${mars.distanceFromSun.measurementUnit}`,
     );
-  });
+  }, 4000);
 };
 
 getPlanet(); // imprime Marte depois de 4 segundos

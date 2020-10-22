@@ -11,19 +11,16 @@ const temperatureInFahrenheit = temperature =>
 const greet = temperature =>
   console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-const handleError = errorReason => console.log('Error getting temperature: Robot is busy');
+const handleError = errorReason => console.log(`Error getting temperature: ${errorReason}`);
 
 const sendMarsTemperature = (onSuccess, onError) => {
-  const errorMsg = handleError();
   const currentTemperature = getMarsTemperature();
   const messageSuccessfullySent = Math.random() <= 0.6;
   setTimeout(() => {
     if (messageSuccessfullySent) onSuccess(currentTemperature);
-    else onError(errorMsg);
+    else onError('Robot is busy');
   }, messageDelay());
 };
 
 sendMarsTemperature(temperatureInFahrenheit, handleError);
 sendMarsTemperature(greet, handleError);
-
-//Retirado do gabarito

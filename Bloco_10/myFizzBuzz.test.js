@@ -1,0 +1,2 @@
+const myFizBuzz = require('./myFizzBuzz');
+

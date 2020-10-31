@@ -4,47 +4,24 @@ const Animals = [
   { name: 'Preguiça', age: 5, type: 'Cat' },
 ];
 
-const findAnimalByName = name =>
+const findAnimalsByType = type =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      const animal = Animals.find(animal => animal.name === name);
-      if (animal) {
-        return resolve(animal);
+      const arrayAnimals = Animals.filter(animal => animal.type === type);
+      if (arrayAnimals.length !== 0) {
+        return resolve(arrayAnimals);
       }
-      const errorMesage = 'Nenhum animal com esse nome!';
-      return reject(errorMesage);
+
+      return reject({ error: 'Não possui esse tipo de animal.' });
     }, 100);
   });
 
-const findAnimalByAge = age =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const listAnimals = Animals.filter(animal => animal.age === age);
-      if (listAnimals.length !== 0) {
-        return resolve(listAnimals);
-      }
-      const messageError = 'Nenhum animal encontrado!';
-      return reject(messageError);
-    }, 100);
-  });
+const getListAnimals = type => findAnimalsByType(type).then(list => list);
 
-const getAnimalByAge = age => {
-  return findAnimalByAge(age).then(animal => animal);
-};
-// Testes
-describe('Testando promise - findAnimalByAge', () => {
-  describe('Quando existe o animal com o a idade', () => {
-    test('Verifique o primeiro nome do animal no array retornado', () => {
-      expect.assertions(1);
-      const animals = [{ name: 'Preguiça', age: 5, type: 'Cat' }];
-      return expect(getAnimalByAge(5)).resolves.toEqual(animals);
-    });
-  });
-
-  describe('Quando não existe o animal com o nome procurado', () => {
-    test('Retorna um erro', () => {
-      expect.assertions(1);
-      return expect(getAnimalByAge(3)).rejects.toBe('Nenhum animal encontrado!');
-    });
+describe('Quando o tipo do animal, existe', () => {
+  test('Retorne a lista de animais', () => {
+    return getListAnimals('Lion').catch(error =>
+      expect(error).toEqual({ error: 'Não possui esse tipo de animal.' }),
+    );
   });
 });

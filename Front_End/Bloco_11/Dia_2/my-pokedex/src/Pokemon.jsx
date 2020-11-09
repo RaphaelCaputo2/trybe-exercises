@@ -8,9 +8,9 @@ class Pokemon extends Component {
     return (
       <div className='pokemon'>
         <div>
-          <p> Esse é o pokemon {name} </p>
-          <p> {type} </p>
-    <p>{`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
+          <p> Esse é o pokemon: <strong>{name}</strong> </p>
+          <p> Seu tipo é: {type} </p>
+    <p>{`Seu peso: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
         </div>
         <img src={image} alt={`${name} sprite`}/>
       </div>

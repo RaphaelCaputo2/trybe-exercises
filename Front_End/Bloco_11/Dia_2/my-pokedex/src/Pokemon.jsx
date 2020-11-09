@@ -8,7 +8,7 @@ class Pokemon extends Component {
     return (
       <div className='pokemon'>
         <div>
-          <p> {name} </p>
+          <p> Esse é o pokemon {name} </p>
           <p> {type} </p>
     <p>{`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
         </div>

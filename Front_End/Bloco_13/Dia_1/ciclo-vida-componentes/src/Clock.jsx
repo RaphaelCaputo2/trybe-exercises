@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 class Clock extends Component {
   constructor() {
     super();
+    
+
     this.state = {
       dataHora: new Date(),
     };
@@ -15,23 +17,21 @@ class Clock extends Component {
   }
 
   componentDidUpdate() {
-    this.setState({ showMessage: false }, () => {
-      if (this.state.dataHora.getSeconds() % 10 === 0) {
-        this.setState({
-          showMessage: true,
-        });
-      }
-    });
+ console.log('render');
   }
 
-  this.setState({ meuEstado: novoValor }, () => {
-    
-  })
+  componentWillUnmount() {
+    clearInterval(this.state.myInterval)
+  }
+
+
+
   render() {
     return (
       <div>
         <p>{this.state.dataHora.toString()}</p>
         {this.state.showMessage ? <p>Multiplo de dez!</p> : ''}
+        
       </div>
     );
   }

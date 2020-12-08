@@ -12,20 +12,35 @@
     <button id="increment">+</button>
     <button id="decrement">-</button>
     <button id="multi">Incrementa 10</button>
+    <button id="clear">LIMPAR</button>
   </div>
   <script>
     function counterReducer(state = 0, action) {
       switch(action.type) {
         case 'INCREMENT':
-          return state + 1;
+          return state + action.value;
           case 'DECREMENT':
-            return state - 1;
+            return state - action.value;
+            case 'CLEAR':
+            return state * action.value;
             default:
               return state;
       }
     }
     const store = Redux.createStore(counterReducer);
-
+    document.getElementById('increment').addEventListener('click', () => {
+      store.dispatch({ type: 'INCREMENT', value: 1 })
+    })
+    document.getElementById('decrement').addEventListener('click', () => {
+      store.dispatch({ type: 'DECREMENT', value: 1 })
+    })
+    document.getElementById('multi').addEventListener('click', () => {
+      store.dispatch({ type: 'INCREMENT', value: 10 })
+    })
+    document.getElementById('clear').addEventListener('click', () => {
+      store.dispatch({ type: 'CLEAR', value: 0 })
+    })
+    store.subscribe(() => document.getElementById('value').innerHTML = store.getState().toString());
 
   </script>
 </body>

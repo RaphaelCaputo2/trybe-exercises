@@ -1,4 +1,4 @@
-import categories from './data';
+import categories from '../data';
 
 const INITIAL_STATE = {
   selectedCategory: {},

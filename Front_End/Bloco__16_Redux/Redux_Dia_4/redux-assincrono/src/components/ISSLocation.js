@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Map, Marker } from 'pigeon-maps';
-import { receiveISSLocation } from '../action';
+import { fetchingISSLocation } from '../action';
 
 class ISSLocation extends Component {
   componentDidMount() {
@@ -35,7 +35,7 @@ const mapStateToProps = ({ issLocation: { latitude, longitude }}) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-getCurrentISSLocation: () => dispatch(receiveISSLocation())
+getCurrentISSLocation: () => dispatch(fetchingISSLocation())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ISSLocation);

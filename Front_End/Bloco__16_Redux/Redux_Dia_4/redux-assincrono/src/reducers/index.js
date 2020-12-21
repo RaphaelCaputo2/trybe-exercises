@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import issLocation from './issLocation';
 
 
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   issLocation
 })
 
+export default rootReducer;

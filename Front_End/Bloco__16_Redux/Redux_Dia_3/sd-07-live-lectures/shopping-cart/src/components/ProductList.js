@@ -6,11 +6,11 @@ import { addToCart } from '../actions';
 class ProductList extends React.Component {
   validateQuantity = (product, cart, addToCart) => {
     const productsInCart = cart.filter(item => item.name === product.name);
-    if(productsInCart.length === product.stockQuantity) return false;
+    if (productsInCart.length === product.stockQuantity) return false;
     addToCart(product);
     return true;
-  }
-  
+  };
+
   render() {
     const { addToCart, cart } = this.props;
     return (
@@ -26,13 +26,15 @@ class ProductList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {products.map((product) => (
+            {products.map(product => (
               <tr key={product.name}>
                 <td>{product.name}</td>
                 <td>R${product.price}</td>
                 <td>{product.stockQuantity}</td>
                 <td>
-                  <button onClick={() => this.validateQuantity(product, cart, addToCart)}>Adicionar</button>
+                  <button onClick={() => this.validateQuantity(product, cart, addToCart)}>
+                    Adicionar
+                  </button>
                 </td>
               </tr>
             ))}
@@ -43,12 +45,12 @@ class ProductList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   cart: state.reducer.cart,
-})
+});
 
-const mapDispatchToProps = (dispatch) => ({
-  addToCart: (product) => dispatch(addToCart(product))
+const mapDispatchToProps = dispatch => ({
+  addToCart: product => dispatch(addToCart(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

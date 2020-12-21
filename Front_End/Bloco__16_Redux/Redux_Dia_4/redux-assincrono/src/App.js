@@ -1,25 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
+import ISSLocation from './components/ISSLocation';
 import './App.css';
 
-function App() {
+ function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1> International Space Station Location Tracker</h1>
+      <ISSLocation />
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,6 +1,10 @@
 db.getCollection('restaurants').find({
-    cuisine: {
-        $ne: "American" 
+    rating: {
+        $nin: [
+        5,
+        6,
+        7
+       ] 
     }
    
-    }).count()
+    })

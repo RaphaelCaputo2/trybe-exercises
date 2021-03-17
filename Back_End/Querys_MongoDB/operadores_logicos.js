@@ -1,0 +1,1 @@
+db.getCollection('restaurants').find({$or: [{rating:  {$lt: 0 } }, {rating: 1 }] })

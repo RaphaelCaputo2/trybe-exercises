@@ -1,0 +1,1 @@
+db.getCollection('restaurants').deleteMany({ cuisine : {$in: ['Ice Cream', 'Gelato', 'Yogurt', 'Ices'] }})

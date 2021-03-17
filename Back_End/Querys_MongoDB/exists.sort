@@ -1,0 +1,5 @@
+db.getCollection('restaurants').find({
+    rating: {
+        $exists: true
+    }
+    }).sort({ rating: -1})

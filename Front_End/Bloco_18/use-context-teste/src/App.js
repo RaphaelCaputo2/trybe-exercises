@@ -1,8 +1,12 @@
 import './App.css';
+import Contador from './components/Contador';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <h1>Hello World</h1>
+      <Contador />
+    </div>
   );
 }
 

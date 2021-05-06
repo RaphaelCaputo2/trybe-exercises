@@ -25,6 +25,16 @@ app.get('/authors/:id', async (req, res) => {
     res.status(400).send(err.message)
   }
 })
+app.post('/authors/add', async (req, res) => {
+  const { first_name, middle_name, last_name } = req.body
+  const createAuthors = await Author.create(first_name, middle_name, last_name)
+ 
+  try{
+    res.status(200).json({message: 'Criado com sucesso'});
+  }catch(err){
+    res.status(400).send(err.message)
+  }
+})
 
 app.listen(PORT, () => {
   console.log("Servidor rodando Caputo!")

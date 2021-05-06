@@ -50,7 +50,19 @@ console.log(authorData)
     lastName
   })
 }
+
+
+const create = async(firstName, middleName, lastName) => {
+  await connection()
+  .then((db) => db.collection('authors')
+  .insertOne({
+    firstName,
+    middleName,
+    lastName
+  }))
+}
 module.exports = {
   getAll,
-  findById
+  findById,
+  create
 };

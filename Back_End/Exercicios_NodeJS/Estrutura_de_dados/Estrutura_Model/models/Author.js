@@ -1,5 +1,5 @@
 const connection = require('./connection');
-
+const { ObjectId} = require('mongodb')
 const getNewAuthor = ({id, firstName, middleName, lastName}) => {
   const fullName = [firstName, middleName, lastName]
   .filter((name) => name).join(" ");
@@ -36,6 +36,21 @@ const getAll = async () => {
  })
 };
 
+
+const findById = async(id) => {
+  const authorData = await connection()
+  .then((db) => db.collection('authors').findOne(ObjectId(id)))
+  if(!authorData) return null;
+console.log(authorData)
+  const { firstName, middleName, lastName} = authorData;
+  return getNewAuthor({
+    id,
+    firstName,
+    middleName,
+    lastName
+  })
+}
 module.exports = {
   getAll,
+  findById
 };

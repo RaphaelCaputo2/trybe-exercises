@@ -30,7 +30,7 @@ app.post('/authors/add', async (req, res) => {
   const createAuthors = await Author.create(first_name, middle_name, last_name)
  
   try{
-    res.status(200).json({message: 'Criado com sucesso'});
+    res.status(200).json(createAuthors);
   }catch(err){
     res.status(400).send(err.message)
   }

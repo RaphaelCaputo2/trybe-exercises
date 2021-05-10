@@ -60,6 +60,11 @@ const create = async(firstName, middleName, lastName) => {
     middleName,
     lastName
   }))
+  return{
+    firstName,
+    middleName,
+    lastName
+  }
 }
 module.exports = {
   getAll,

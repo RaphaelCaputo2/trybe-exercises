@@ -1,5 +1,7 @@
 const { ObjectId } = require('mongodb');
 const User = require('../models/User');
+
+
 const getAll = async () => {
  return await User.getAll()
 };
